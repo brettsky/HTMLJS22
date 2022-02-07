@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W5 D1 - Forms & Tables Demo</title>
+</head>
+<body>
+    <h1>Basic Form Demo</h1>
+
+
+    <h2> Form w/o table</h2>
+
+    <!--text fields for manual entry by user- value becomes what user types onto box before submitting-->
+    <form>
+
+
+    <!--Labels are used to match up with input elements-->
+    <!--for attribute connects labels with inputs -->
+    <label for="firstname"> First Name: </label>
+    <input type="text" name="firstname" id="firstname">
+    <br>
+    <br>
+
+    <label for="lastname"> Last Name: </label>
+    <input type="text" name="lastname" id="lastname">
+    <br>
+    <br>
+    <!--Required attribute user must fill in that element-->
+
+    <label for="email">Email:</label>
+    <input type="text" name="email" id="email" required>
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+    
+
+
+
+    </form>
+
+
+    <h2>Form w/ table</h2>
+
+    <form>
+        <table>
+            <!--T head can be used for column headers-->
+
+            <!--T body is required inside of table-->
+
+            <tbody>
+                <!--Table row; should include one <td> for every possible column leave blank when no info for that row -->
+                
+                    <td><!--First data cell in row (left)-->
+                        <label for="firstname">First name: </label>
+
+
+                    </td>
+                    <br>
+                    <br>
+
+                    <td> <!--Second data cell in row (right)-->
+                        <input type="text" id="firstname" name="firstname" maxlength="50">
+
+                    </td>
+                    <td><!--First data cell in row (left)-->
+                        <label for="lastname">last name: </label>
+
+
+                    </td>
+                    <br>
+                    <br>
+
+                    <td> <!--Second data cell in row (right)-->
+                        <input type="text" id="lastname" name="lastname" maxlength="50">
+
+
+                    </td>
+
+                    <br>
+                    <br>
+
+                    <td><!--First data cell in row (left)-->
+                        <label for="email">email: </label>
+
+
+                    </td>
+                    <br>
+                    <br>
+
+                    <td> <!--Second data cell in row (right)-->
+                        <input type="text" id="email" name="email" maxlength="50">
+
+
+                    </td>
+                    <br>
+                    <br>
+
+                    <td>
+                        <label for="comments">Comments</label>
+                    </td>
+                    <td>
+                        <textarea name="comments" rows="10" cols="20" placeholder="Your comments here...."></textarea>
+                     </td>
+                <tr>
+                    <td>
+                        <label for="favecolor">Pick your fave color</label>
+
+                    </td>
+                    <td>
+                        <select name="favecolor">
+                            <option value="red">red</option>
+                            <option value="orange">orange</option>
+                            <option value="yellow">yellow</option>
+                            <option value="green">green</option>
+                            <option value="blue">blue</option>
+                            <option value="indigo">indigo</option>
+                            <option value="violet">violet</option>
+                        </select>
+                    </td>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+                            <input type="submit" value="submit">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="study">Program of study</label>
+                        </td>
+
+                        <td>
+                            <input type="radio" name="study" value="SE"> Software Engineering <br>
+                            <input type="radio" name="study" value="Cyb"> Cyber Security <br>
+                            <input type="radio" name="study" value="Ne"> Network Engineering
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="vehicle"> Select Your Vehicles</label>
+                        </td>
+
+                        <td>
+                            <input type="checkbox" name="vehicle" value="car">Car
+                            <input type="checkbox" name="vehicle" value="ship">ship
+                            <input type="checkbox" name="vehicle" value="horse">horse
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="date">Date: </label>
+
+                        </td>
+
+                        <td>
+                            <input type="date" name="date">
+
+                        </td>
+                    </tr>
+
+
+
+    
+
+
+            </tbody>
+
+
+
+        </table>
+    </form>
+</body>
+</html>
