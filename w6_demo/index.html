@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Brett Berard">
+    <meta name="description" content=" W6 JS Intro">
+    <title>W6 JS Intro</title>
+</head>
+<body>
+    <!-- There should be some sort of html in the file-->
+    <h1>Week 6 Intro Demo</h1>
+
+    <!-- In doc javascript-->
+    <!-- In doc: is within the html file (or current resource)-->
+    <script>
+        //everything in the <script> tags must be written in JavaScript
+        
+        /* I want to split comments onto multiple lines 
+        i can do this 
+        (block comments)*/
+
+        //creating variable --> keyword "var"
+
+        var num1 //decleration only
+
+        num1 = 7 //once declared value can be assigned 
+
+        //combine declaration and definition onto one line
+
+        var num2 = 10 
+
+        var num3 = 8 
+
+        // the vars num1 , num2 , num3 cannot be used (processing display condtions) until they have been assigned value 
+
+        var sum = num1 + num2 + num3
+
+        //display data to the browser -- user can see information 
+
+        //alert() creates a pop up in the browser page to display dats 
+        //alert() --> print / output
+        //` ` denotes a literal string --> combines formatting from the .format() method in python --> holds var name inside of ${VAR}
+
+        alert(`the sum is: \n${sum}`)
+        //Escape sequences work in literal strings \n \t 
+
+        //Display to the console 
+        //For Javascript, the console is built into the dev tools 
+
+        /* accesssing dev tools 
+            -f12 or right click inspect 
+            -choose console in the upper right menu panel 
+            -refresh
+        */ 
+       console.log(`the sum is ${sum}`)
+       //console.log is primarilly used for testing 
+       //no physical use for display in the page, only in the dev tools 
+
+       //"INPUT" gaining data from a browser pop up where user enters information not a form 
+
+       //Prompts user for a value; script waits for the enter key/ok to be initiated before moving on 
+
+       prompt(`enter your name`) //input in python 
+       //most often we use prompts() to gain data to use 
+       //store data from the prompt()
+
+       var name = prompt(`Enter your name: `)
+
+       console.log(name)
+
+       alert(`Hello there ${name}! \n Click OK to continue`)
+
+       // all data from the prompt is a string value 
+       //concatenation (adding strings)
+       
+       var lastname = prompt(`Enter your last name`)
+
+       var full = name + "  " + lastname
+
+       console.log(full)
+
+       var num = prompt(`Enter a number to be multiplied by 7`)
+
+       var multi = num * 7
+
+       console.log(multi) //still shows numeric value 
+
+       //for reference: Number()
+       //num =Number(num) --> ensures num is truly a number 
+
+       console.log(` the multi value is ${multi}`) //in console 
+
+       alert(`${num} * 7 = ${multi}`)
+
+
+
+       console.log(`we have pressed the prompt()`) //inbrowser popup 
+
+
+
+
+
+
+        
+        
+    </script>
+    
+    
+</body>
+</html>

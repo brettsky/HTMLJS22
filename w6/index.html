@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Brett Berard">
+    <meta name="description" content="Week 6 JavaScript Pay Calculator">
+    <title>Week 6 JavaScript Pay Calculator </title>
+</head>
+
+<body>
+    <h1> Week 6 JavaScript pay calculator</h1>
+    <!---->
+
+    <script>
+        //
+        
+
+        var hoursWorked = prompt(`How many hours did you work each week`) * 2 //multiplied by 2 for a 2 week period
+
+        var hourlyRate = prompt(`What is your hourly pay rate `) //Users hourly rate
+
+
+        var taxRate = .2
+
+        var gross = hoursWorked * hourlyRate //gross pay calculated and total hours worked times hourly rate
+
+        console.log(gross) //displays gross value in console
+
+        var tax = gross * taxRate //tax deductions calcualtes at gross pay times tax rate 
+
+        console.log(tax) //displays tax deductions in consloe
+
+        var net = gross - tax //calculates net pay as gross pay minus tax deductions 
+
+        console.log(net) // displays net pay in console 
+
+        alert(`Gross Pay: $${gross.toFixed(2)}\nTax Deductions: $${tax.toFixed(2)}\nNet Pay: $${net.toFixed(2)}`)
+        //displays calculated values to the user 
+
+
+
+    
+
+
+    </script>
+    <img src="images/payValid.JPG" style="width: 100%;">
+    
+</body>
+</html>
