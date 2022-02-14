@@ -26,18 +26,24 @@
 
         var gross = hoursWorked * hourlyRate //gross pay calculated and total hours worked times hourly rate
 
-        console.log(gross) //displays gross value in console
+        
 
         var tax = gross * taxRate //tax deductions calcualtes at gross pay times tax rate 
 
-        console.log(tax) //displays tax deductions in consloe
+        
 
         var net = gross - tax //calculates net pay as gross pay minus tax deductions 
 
-        console.log(net) // displays net pay in console 
+       
 
         alert(`Gross Pay: $${gross.toFixed(2)}\nTax Deductions: $${tax.toFixed(2)}\nNet Pay: $${net.toFixed(2)}`)
         //displays calculated values to the user 
+
+        console.log(gross) //displays gross value in console
+
+        console.log(tax) //displays tax deductions in consloe
+
+        console.log(net) // displays net pay in console 
 
 
 
