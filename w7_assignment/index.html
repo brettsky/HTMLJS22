@@ -18,38 +18,47 @@
    <!--each form element is separated by a break space (new line) -->
     <form>
         <table>
-            
+           <tr>
+               <td>
+                <label for="first">First Name: </label>
+               </td>
+               <td>
+                   <input type="text" id="first">
+               </td>
+           </tr>
+
+           <tr>
             <td>
-            <label for="first">First Name: </label>
-            <input type="text" id="first">
+                <label for="last">Last Name: </label>
             </td>
-            
 
-            <br>
-
-            
             <td>
-            <label for="last">Last Name: </label>
-            <input type="text" id="last">
+                <input type="text" id="last">
             </td>
-            
-            <br>
 
+           </tr>
             
-            <td>
-            <label for="hours">Hours Worked: </label>
-            <input type="text" id="hours">
-            </td>
-         
+           <tr>
+               <td>
+                <label for="hours">Hours Worked: </label>
+                
+               </td>
 
-            
+               <td>
+                <input type="text" id="hours">
+               </td>
+           </tr>
+        
+           <tr>
+               <td>
+                <label for="rate">Hourly Rate: </label>
+               </td>
+               
+               <td>
+                <input type="text" id="rate">
+               </td>
+           </tr>
 
-            <br>
-            
-            <td>
-            <label for="rate">Hourly Rate: </label>
-            <input type="text" id="rate">
-            </td>
            
         </table>
 
@@ -73,8 +82,7 @@
                     *below is where the form values (and new values processed by the js) will be displayed-->
             <p id="check" style="font-family:Courier New, monospace; width:220px; text-align:right;">
             <script>
-                var test = ` ` 
-                test += document.querySelector(`#first`)
+
 
             </script>
             </p>
