@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W8 - JS Objects and Arrays</title>
+</head>
+<body>
+    <h1>Week 8 Demo</h1>
+
+    <div id="output">
+        <!--This is where info will be written from JS back to the HTML page-->
+
+
+    </div>
+    <script>
+        //variables vs arrays 
+        var firstname1 =  `brett`
+        var lastname1 = `berard`
+        var age1 = 70
+        var town1 = `north smitifield`
+
+        var firstname2 =  `jay`
+        var lastname2 = `aguiar`
+        var age2 = 40
+        var town3 = `warwick`
+
+        //basic array creation for students in a class 
+
+        var people = [//[] indicates and array 
+        `Katie`, //people[0]
+        `Jay`,//people[1]
+        `Brett`,//people[2]
+        `Tyler`,//people[3]
+        `Aiden`,//people[4]
+        `Brandon`,//people[5]
+        `John`//people[6]
+        ]
+        console.log(people)
+        console.log(people[5])
+        var person = people[5]//array + index is 1 value 
+        
+        var colors =[
+            `grey`,//colors[0]
+            `black`,//colors[1]
+            `red`,//colors[2]
+            `blue`,//colors[3]
+            `green`,//colors[4]
+            `purple`,//colors[5]
+            `blue`//colors[6]
+        ]
+
+        console.log(`${people[5]}'s favorite color is ${colors[5]}!`)
+        
+        //For loop - proccessing for arrays 
+
+        for(let index = 0; index < people.length; index++)//3 peice condition
+        {
+            // i++ --> i = i + 1 
+            console.log(`${people[index]}'s favorite color is ${colors[index]}!`)
+
+        }
+
+        //associative arrays - use strings as index instead of integers 
+
+        var persons = [] //empty array type 
+        person[`teacher`] = `Katie`
+        person[`firstRow1`] = `John`
+        person[`firstRow2`] = `Richard`
+
+        //multi-dimensional arrays - 2D array of arrays; this is a table 
+
+        var cars = [
+            [`MAKES`, `Toyota`, `Chevy`, `Ford`, `Audi`],//cars[0]
+            [`MODELS`, `Camry`, `Cavalier`, `F150`, `RS8`],//cars[1]
+            [`YEARS`, `1998`, `2006`, `2018`, `2016`]//cars[2]
+        ]
+        
+        //display the cavalier 
+        console.log(cars[1][2])
+        //first[] handels row second[] handles field/ column
+
+        //Objects- Basic object creation; big benefit: you can use different data types 
+
+        var person1 = {//{} denote object key + value pairs 
+        first:`katie`,
+        last: `Truchon`,
+        age: 32 ,
+        height:  64 , 
+        hasPets: true, 
+        classes:[`SE111.02`, `SE111.22`, `SE111.32`, `SE111C.HS`, `GMW251.06`, `VGD129.12`, `VGD129.22`],
+        pets: {dog1: `George`, dog2: `Marlowe`, cat:`Jack`}
+
+
+        //Dot Syntax - When accessing an objects values you use objectName[dot]objectProperty ; property grans access to the value you are looking to work with
+
+
+
+        }
+        console.log(person1.first)
+
+        var person2 =
+         {//{} denote object key + value pairs 
+        first:`Antonio`,
+        last: `Martinez`,
+        age: 34,
+        height: 70, 
+        hasPets: true, 
+        classes:[`SE111.02`, `SE231.02`],
+        pets: {cat:`Tadej`},
+        greeting: function(){alert(`Hi There ${this.first} ${this.last}`)}
+        }
+        console.log(`${person1.first} vs ${person2.first}`)
+        person2.greeting()
+
+        for(let key in person1)
+        {
+            //Key is the property/attributes, person1 is the object
+            //this loop will run for as many keys are there are in person1 
+            
+            console.log(key)//show all properties
+            console.log(`${key.toUpperCase}: ${person1[key]}`)
+
+        }
+        console.log(person1)
+
+        //Create an array filled with objects 
+
+        var humans = [
+            person1,person2
+        ]
+
+        var person3 = {
+
+            first:`Jack`,
+            last: `Truchon`,
+            age: 12,
+            height:14,
+            hasPets: false,
+            classes: [],
+            pets: {}
+        }
+
+        //adding to a pre-existing array/ populated array 
+        humans.push(person3)//adds person3 as a 3rd value in array; just like .append() in python 
+
+        for(let i = 0; i < humans.length; i++)
+        {
+            //This outter standard for loop loops through values stored in the array
+            console.log(`INFO FOR ${humans[i].first}-----`)
+
+            for(let key in humans[i])//humans[i] -->1 obj 
+            {
+                //this loops through the objects keys
+                console.log(`${key.toUpperCase()}: ${humans[i][key]}`)
+                //key specifies the property 
+                //humans[i][key] current obkects current property value 
+
+            }
+            console.log(`-------------`)
+        }
+
+        //getting info from JS and write to the output in html document 
+
+        var output = ` `//empty string value
+
+        for(let i=0; i < humans.length; i++)
+        {
+            //add a header for each new person 
+            output +=`<h3 id= "index-${i}">Person #${i+1}</h3>`
+
+            // once header is created add each property + value for each person (object) 
+            for(let key in humans[i])
+            {
+                output += `<p><b> ${key.toUpperCase()}:<b> ${humans[i][key]}</p>`
+            }
+
+        
+            console.log(output)
+            output += ` <hr>`
+
+            function hi()
+            {
+                alert(`hi there ${humans[i].first} ${humans[i].last}, you have been added to the output!`)
+            }
+
+            hi()
+
+        }
+
+       
+
+        document.querySelector(`#output`).innerHTML = output
+    </script>  
+  
+</body>
+</html>
